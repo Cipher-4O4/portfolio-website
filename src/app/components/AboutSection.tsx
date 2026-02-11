@@ -31,7 +31,7 @@ export function AboutSection() {
     {
       icon: GraduationCap,
       label: 'Pendidikan',
-      value: 'Rekayasa Perangkat Lunak, Smkn 1 Boyolangu',
+      value: 'RPL, SMKN 1 Boyolangu',
     },
     {
       icon: Mail,
@@ -121,7 +121,7 @@ export function AboutSection() {
 
               {/* Info Grid */}
               <motion.div
-                className="grid grid-cols-2 gap-6"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -130,18 +130,18 @@ export function AboutSection() {
                 {infoCards.map((card, index) => (
                   <motion.div
                     key={index}
-                    className="bg-gray-50 rounded-xl p-6 flex items-start gap-4 transition-all duration-300 hover:shadow-md"
+                    className="bg-gray-50 rounded-xl p-4 sm:p-6 flex items-start gap-3 sm:gap-4 transition-all duration-300 hover:shadow-md"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                   >
-                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <card.icon className="w-6 h-6 text-white" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <card.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1 font-medium">{card.label}</p>
-                      <p className="text-base text-black font-semibold">{card.value}</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs sm:text-sm text-gray-600 mb-1 font-medium">{card.label}</p>
+                      <p className="text-sm sm:text-base text-black font-semibold break-words">{card.value}</p>
                     </div>
                   </motion.div>
                 ))}

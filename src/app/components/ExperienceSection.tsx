@@ -7,7 +7,7 @@ export function ExperienceSection() {
   const workExperiences = [
     {
       title: 'Frontend Developer Intern',
-      company: 'Tech Startup Indonesia',
+      company: 'SMKN 1 Boyolangu',
       period: 'Jun 2025 - Aug 2025',
       location: 'Tulungagung, Indonesia',
       description:
@@ -16,16 +16,16 @@ export function ExperienceSection() {
     },
     {
       title: 'Web Developer',
-      company: 'Freelance Projects',
+      company: 'SMKN 1 Boyolangu',
       period: 'Jan 2025 - Present',
-      location: 'Remote',
+      location: 'Tulungagung, Indonesia',
       description:
         'Created custom websites for local businesses and startups. Specialized in modern web technologies and responsive design principles.',
       skills: ['HTML/CSS', 'JavaScript', 'WordPress', 'UI/UX Design'],
     },
     {
       title: 'Junior Web Developer',
-      company: 'Digital Agency Tulungagung',
+      company: 'SMKN 1 Boyolangu',
       period: 'Sep 2025 - Dec 2025',
       location: 'Tulungagung, Indonesia',
       description:
