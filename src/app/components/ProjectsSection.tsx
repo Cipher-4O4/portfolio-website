@@ -80,7 +80,7 @@ export function ProjectsSection() {
                 <p className="text-sm text-gray-600 mb-4">{project.description}</p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
@@ -89,6 +89,28 @@ export function ProjectsSection() {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                {/* Action Buttons - Always visible on mobile */}
+                <div className="flex gap-3 pt-2 border-t border-gray-100">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-800 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>View Live</span>
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center px-4 py-2.5 border-2 border-gray-900 text-gray-900 text-sm rounded-lg hover:bg-gray-50 transition-colors"
+                    aria-label="View GitHub Repository"
+                  >
+                    <Github className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </div>
